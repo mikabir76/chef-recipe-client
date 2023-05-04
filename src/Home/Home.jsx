@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'
 import 'swiper/css/navigation';
 import Services from '../Components/services/Services';
+import ChefRecipe from '../Components/ChefRecipe/ChefRecipe';
+import { useLoaderData } from 'react-router-dom';
 
-const HeroArea = () => {
+const Home = () => {
   return (
     <div className='lg:max-w-screen-2xl mx-auto'>
       <Swiper
@@ -43,8 +45,10 @@ const HeroArea = () => {
         </SwiperSlide>
       </Swiper>
      <Services></Services>
+     {/* Chef Recipe Data added===================== */}
+     <ChefRecipe></ChefRecipe>
     </div>
   );
 };
 
-export default HeroArea;
+export default Home;
