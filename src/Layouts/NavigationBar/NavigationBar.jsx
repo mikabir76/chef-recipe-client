@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const NavigationBar = () => {
@@ -11,9 +11,9 @@ const NavigationBar = () => {
           <h1 className='font-bold text-2xl'>FOOD<span className='text-orange-400'>MOOD</span></h1>
         </div>
         <div className='space-x-9 font-bold text-xl'>
-          <Link>Home</Link>
-          <Link to='/blog'>Blog</Link>
-          <Link>Recipe</Link>
+          <NavLink to='/' className={({isActive}) => isActive ? 'text-orange-400 hover:text-2xl' : ""}>Home</NavLink>
+          <NavLink to='/blog' className={({isActive}) => isActive ? 'text-orange-400 hover:text-2xl' : ""}>Blog</NavLink>
+          <NavLink className={({isActive}) => isActive ? "" : "text-orange-400"}>Recipe</NavLink>
         </div>
       <div className='space-x-5 font-bold text-xl'>
         <p>Profile</p>
