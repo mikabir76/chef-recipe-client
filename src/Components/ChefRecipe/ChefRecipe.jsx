@@ -10,9 +10,9 @@ const ChefRecipe = () => {
         .then(data => setChefCard(data))
     }, [])
     return (
-        <div className='lg:max-w-screen-2xl mx-auto'>
-            <h1>Our Honorable Chef List</h1>
-           <div className='grid grid-cols-1 lg:grid-cols-3'>
+        <div className='lg:max-w-screen-2xl mb-12 mx-auto'>
+            <h1 className='text-4xl font-bold text-center mb-8'>-Our Honorable Chef List-</h1>
+           <div className='grid grid-cols-1 lg:grid-cols-3 gap-3'>
            {
                 chefCard.map(chef => <SelectedChef key={chef.id} chef={chef}></SelectedChef>)
             }
