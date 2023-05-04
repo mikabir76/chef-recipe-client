@@ -12,9 +12,11 @@ const ChefRecipe = () => {
     return (
         <div className='lg:max-w-screen-2xl mx-auto'>
             <h1>Our Honorable Chef List</h1>
-            {
+           <div className='grid grid-cols-1 lg:grid-cols-3'>
+           {
                 chefCard.map(chef => <SelectedChef key={chef.id} chef={chef}></SelectedChef>)
             }
+           </div>
         </div>
     );
 };

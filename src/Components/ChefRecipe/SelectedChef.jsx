@@ -3,7 +3,7 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight, FaArrowRight } from 'react
 
 const SelectedChef = ({chef}) => {
     const {id, chefName, chefPicture, yearsOfExperience}  = chef
-    console.log(chef)
+    // console.log(chef)
     return (
         <div className=''>
           <div className="card card-compact w-96 bg-base-100 shadow-xl">
