@@ -8,9 +8,9 @@ const NavigationBar = () => {
       
         <div>
           <img className='h-8' src="/../src/assets/logo.png" alt="" />
-          <h1 className='font-bold text-xl'>CHO<span className='text-blue-800'>W</span></h1>
+          <h1 className='font-bold text-xl'>FOOD<span className='text-blue-800'>MOOD</span></h1>
         </div>
-        <div className='space-x-9'>
+        <div className='space-x-9 text-xl'>
           <Link>Home</Link>
           <Link to='/blog'>Blog</Link>
           <Link to='/login'>Login</Link>

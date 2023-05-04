@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Lottie from "lottie-react";
 import register from '../../assets/register.json'
 import { Link } from 'react-router-dom';
 import { BiError } from "react-icons/bi";
 import { FaBeer, FaCircle } from 'react-icons/fa';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 
 const Register = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const {createUser, profileUpdate} = useContext(AuthContext);
     const handleRegister = event =>{
         event.preventDefault();
         const form = event.target;
@@ -30,9 +32,30 @@ const Register = () => {
             setError('Please must be a six character text')
             return
         }
+        createUser(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            profileUserUpdate(loggedUser, name, photo)
+        })
+        .catch(err => {
+            console.log(err.message)
+        })
+        
+    }
+    const profileUserUpdate= (user, name, url)=>{
+        profileUpdate(user, {
+            displayName: name,
+            photoURL: url
+           
+        })
+        .then(()=>{
+
+        })
+        .catch(err => console.log(err.message))
     }
     return (
-        <div className=' mx-auto w-[50%] grid lg:grid-cols-2 sm:grid-cols-1 items-center mt-24 shadow-xl'>
+        <div className=' mx-auto w-[50%] border-2 mb-24 grid lg:grid-cols-2 sm:grid-cols-1 items-center mt-24 shadow-xl'>
             
             <div className="hero w-[25%]">
                 <div className="hero-content flex-col">
