@@ -8,6 +8,8 @@ import Home from "../Home/Home";
 import ChefRecipe from "../Components/ChefRecipe/ChefRecipe";
 import ChefDetails from "../Components/ChefRecipe/ChefDetails";
 import PrivateRouter from "../Provider/PrivateRouter";
+import ErrorPage from "../Components/ErrorPage/ErrorPage";
+import ErrorLayout from "../Layouts/ErrorLayout/ErrorLayout";
 
 const route = createBrowserRouter(
     [
@@ -43,6 +45,10 @@ const route = createBrowserRouter(
                 }
                 
             ]
+        },
+        {
+            path: '*',
+            element: <ErrorLayout></ErrorLayout>
         }
        
     ]

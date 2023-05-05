@@ -22,9 +22,9 @@ const Home = () => {
                         <img className='w-100%' src="https://wallpaperaccess.com/full/4117465.jpg" alt="" />
                     </div>
                     <div className='absolute top-1/4 space-y-5 text-white w-2/4 text-center left-1/4'>
-                        <h1 className='text-4xl font-bold'>Best Trending Food</h1>
-                        <p className=''>No Matter How you cook FOODMOOD has many the recipes</p>
-                        <button className='bg-orange-400 px-6 py-2 rounded-lg'>Explore Recipes</button>
+                        <h1 className='text-4xl font-bold'>Its not just food, its an experience</h1>
+                        <p className='text-xl'>No Matter How you cook FOODMOOD has many the recipes</p>
+                        <button className='bg-orange-400 px-6 py-2 text-xl font-bold rounded-lg'>Explore Recipes</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -33,9 +33,9 @@ const Home = () => {
                         <img className='h-2/3' src="https://wallpaperaccess.com/full/3014596.jpg" alt="" />
                     </div>
                     <div className='absolute top-1/4 space-y-5 text-white w-2/4 text-center left-1/4'>
-                        <h1 className='text-4xl font-bold'>Best Trending Food</h1>
-                        <p className=''>No Matter How you cook FOODMOOD has many the recipes</p>
-                        <button className='bg-orange-400 px-6 py-2 rounded-lg'>Explore Recipes</button>
+                    <h1 className='text-4xl font-bold'>Its not just food, its an experience</h1>
+                        <p className='text-xl'>No Matter How you cook FOODMOOD has many the recipes</p>
+                        <button className='bg-orange-400 px-6 py-2 text-xl font-bold rounded-lg'>Explore Recipes</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -43,9 +43,9 @@ const Home = () => {
                         <img src="https://media.thebicestercollection.com/3z73vs69pqez/2FGurCWIcuGyUsavCJLhKm/b7e53b7e3f274ef87864d5df3b0cd1bb/BV_Landscape_1920x1080_-farmshop_Winter_Hero.jpg?w=1920&h=1080&fl=progressive&q=80&fm=jpg" alt="" />
                     </div>
                     <div className='absolute top-1/4 space-y-5 text-white w-2/4 text-center left-1/4'>
-                        <h1 className='text-4xl font-bold'>Best Trending Food</h1>
-                        <p className=''>No Matter How you cook FOODMOOD has many the recipes</p>
-                        <button className='bg-orange-400 px-6 py-2 rounded-lg'>Explore Recipes</button>
+                    <h1 className='text-4xl font-bold'>Its not just food, its an experience</h1>
+                        <p className='text-xl'>No Matter How you cook FOODMOOD has many the recipes</p>
+                        <button className='bg-orange-400 px-6 py-2 text-xl font-bold rounded-lg'>Explore Recipes</button>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -53,9 +53,9 @@ const Home = () => {
                         <img src="https://magazine.zenith.me/sites/default/files/pool/medias/images/articles/1920%201080%20leckerschmecker%20%281%29.jpg" alt="" />
                     </div>
                     <div className='absolute top-1/4 space-y-5 text-white w-2/4 text-center left-1/4'>
-                        <h1 className='text-4xl font-bold'>Best Trending Food</h1>
-                        <p className=''>No Matter How you cook FOODMOOD has many the recipes</p>
-                        <button className='bg-orange-400 px-6 py-2 rounded-lg'>Explore Recipes</button>
+                    <h1 className='text-4xl font-bold'>Its not just food, its an experience</h1>
+                        <p className='text-xl'>No Matter How you cook FOODMOOD has many the recipes</p>
+                        <button className='bg-orange-400 px-6 py-2 text-xl font-bold rounded-lg'>Explore Recipes</button>
                     </div>
                 </SwiperSlide>
             </Swiper>

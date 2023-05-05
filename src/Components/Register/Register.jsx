@@ -3,6 +3,7 @@ import Lottie from "lottie-react";
 import register from '../../assets/register.json'
 import { Link } from 'react-router-dom';
 import { BiError } from "react-icons/bi";
+import { ToastContainer, toast } from 'react-toastify';
 import { FaBeer, FaCircle } from 'react-icons/fa';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
@@ -37,6 +38,7 @@ const Register = () => {
             const loggedUser = result.user;
             console.log(loggedUser)
             profileUserUpdate(loggedUser, name, photo)
+            toast('Register has been successfully')
         })
         .catch(err => {
             console.log(err.message)
@@ -100,6 +102,7 @@ const Register = () => {
                         </form>
                     </div>
                 </div>
+                <ToastContainer></ToastContainer>
             </div>
             <div className='w-[25%] '>
                 <Lottie className='h-96 w-96 mr-96' animationData={register}></Lottie>
