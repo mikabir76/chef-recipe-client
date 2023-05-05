@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaStar, FaStarHalf } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { useLoaderData } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ChefDetails = () => {
-    const chefDetails = useLoaderData()
+    const chefDetails = useLoaderData();
+    const [buttonDisabled, setButtonDisabled] = useState(false);
+    const handleClick = () => {
+      // Disable the button
+      setButtonDisabled(true);
+      toast("recipe is your favorite");
+    };
+  
+
     const {chef_name, chef_picture, ingredients, likes, method, ratting, bio, years_of_experience, special_recipes}  = chefDetails;
     console.log(chefDetails)
     return (
@@ -18,7 +27,7 @@ const ChefDetails = () => {
                         
                     </div>
                   
-                    
+                    <ToastContainer></ToastContainer>
                 </div>
                 <div className='-ms-28'>
                     <h1 className='text-3xl font-bold mb-3'>{chef_name}</h1>
@@ -49,7 +58,16 @@ const ChefDetails = () => {
         <td>{special_recipes[0]}</td>
         <td>{ingredients[0]}</td>
         <td>1. Preheat oven to 375°F. 2. Coat chicken breasts in breadcrumbs and Parmesan cheese. <br /> 3. Brown chicken in a skillet. 4. Pour marinara sauce over chicken. 5. Top with mozzarella cheese. <br /> 6. Bake for 25 minutes or until chicken is cooked through</td>
-        <td className='text-end'><button className='bg-orange-400 px-6 py-2 text-white  rounded-md'>Favaourite</button></td>
+        <td className='text-end'><button
+                        onClick={handleClick}
+                        disabled={buttonDisabled}
+                        type="button"
+                        className={`bg-orange-400 px-6 py-2 text-white  rounded-md ${
+                          buttonDisabled ? "opacity-50 cursor-not-allowed" : ""
+                        }`}
+                      >
+                      Favourite
+                      </button></td>
       </tr>
       {/* row 2 */}
       <tr className="hover">
@@ -57,7 +75,16 @@ const ChefDetails = () => {
         <td>{special_recipes[1]}</td>
         <td>{ingredients[1]}</td>
         <td>1.Spread mixture over ice cream. 2. Line a baking sheet with parchment paper. <br /> 3. Spread ice cream onto parchment paper. <br /> 4. Freeze for 1 hour. <br /> 5. Beat egg whites and cream of tartar until stiff peaks form. </td>
-        <td className='text-end'><button className='bg-orange-400 px-6 py-2 text-white  rounded-md'>Favaourite</button></td>
+        <td className='text-end'><button
+                        onClick={handleClick}
+                        disabled={buttonDisabled}
+                        type="button"
+                        className={`bg-orange-400 px-6 py-2 text-white  rounded-md ${
+                          buttonDisabled ? "opacity-50 cursor-not-allowed" : ""
+                        }`}
+                      >
+                      Favourite
+                      </button></td>
       </tr>
       {/* row 3 */}
       <tr>
@@ -65,21 +92,48 @@ const ChefDetails = () => {
         <td>{special_recipes[2]}</td>
         <td>{ingredients[2]}</td>
         <td>1. Preheat oven to 450°F. 2. Line a baking sheet with parchment paper. <br /> 3. Spread ice cream onto parchment paper. 4. Freeze for 1 hour. <br /> 5. Beat egg whites and cream of tartar until stiff peaks form. </td>
-        <td className='text-end'><button className='bg-orange-400 px-6 py-2 text-white  rounded-md'>Favaourite</button></td>
+        <td className='text-end'><button
+                        onClick={handleClick}
+                        disabled={buttonDisabled}
+                        type="button"
+                        className={`bg-orange-400 px-6 py-2 text-white  rounded-md ${
+                          buttonDisabled ? "opacity-50 cursor-not-allowed" : ""
+                        }`}
+                      >
+                      Favourite
+                      </button></td>
       </tr>
       <tr className="hover">
         <th>4</th>
         <td>{special_recipes[3]}</td>
         <td>{ingredients[3]}</td>
         <td>1. Preheat oven to 375°F. 2. Coat chicken breasts in breadcrumbs and Parmesan cheese. <br /> 3. Brown chicken in a skillet. 4. Pour marinara sauce over chicken. <br /> 5. Top with mozzarella cheese. </td>
-        <td className='text-end'><button className='bg-orange-400 px-6 py-2 text-white  rounded-md'>Favaourite</button></td>
+        <td className='text-end'><button
+                        onClick={handleClick}
+                        disabled={buttonDisabled}
+                        type="button"
+                        className={`bg-orange-400 px-6 py-2 text-white  rounded-md ${
+                          buttonDisabled ? "opacity-50 cursor-not-allowed" : ""
+                        }`}
+                      >
+                      Favourite
+                      </button></td>
       </tr>
       <tr>
         <th>5</th>
         <td>{special_recipes[4]}</td>
         <td>{ingredients[4]}</td>
         <td>1. Preheat oven to 375°F. 2. Coat chicken breasts in breadcrumbs and Parmesan cheese. <br /> 3. Brown chicken in a skillet. 4. Pour marinara sauce over chicken. <br /> 5. Top with mozzarella cheese.</td>
-        <td className='text-end'><button className='bg-orange-400 px-6 py-2 text-white  rounded-md'>Favaourite</button></td>
+        <td className='text-end'><button
+                        onClick={handleClick}
+                        disabled={buttonDisabled}
+                        type="button"
+                        className={`bg-orange-400 px-6 py-2 text-white  rounded-md ${
+                          buttonDisabled ? "opacity-50 cursor-not-allowed" : ""
+                        }`}
+                      >
+                      Favourite
+                      </button></td>
       </tr>
     </tbody>
   </table>
