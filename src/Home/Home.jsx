@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import Services from '../Components/services/Services';
 import ChefRecipe from '../Components/ChefRecipe/ChefRecipe';
 import { useLoaderData } from 'react-router-dom';
+import CustomersReviews from '../Components/CustomersReviews/CustomersReviews';
 
 const Home = () => {
     return (
@@ -59,8 +60,10 @@ const Home = () => {
                 </SwiperSlide>
             </Swiper>
             <Services></Services>
+            
             {/* Chef Recipe Data added===================== */}
             <ChefRecipe></ChefRecipe>
+            <CustomersReviews></CustomersReviews>
             <div>
                 <h1 className='text-center text-4xl font-bold'>Customer order form</h1>
             <div className="w-full ">

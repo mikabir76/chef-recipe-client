@@ -7,7 +7,7 @@ import fast from './../../assets/fast.json'
 
 const Services = () => {
     return (
-        <div className='lg:max-w-screen-2xl mx-auto mb-40'>
+        <div className='lg:max-w-screen-2xl mx-auto mb-20'>
           <div>
             <h1 className='text-4xl font-bold text-center mb-8 mt-8'>-Our Services-</h1>
           </div>

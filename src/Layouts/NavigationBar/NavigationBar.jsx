@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 
 const NavigationBar = () => {
+  const {user} = useContext(AuthContext);
   return (
     <div className="navbar flex justify-between h-24 lg:max-w-screen-2xl mx-auto rounded-lg ">
       
@@ -16,8 +18,8 @@ const NavigationBar = () => {
           <NavLink className={({isActive}) => isActive ? "" : "text-orange-400"}>Recipe</NavLink>
         </div>
       <div className='space-x-5 font-bold text-xl'>
-        <p>Profile</p>
-        <Link to='/login'><button className='bg-orange-400 px-6 py-2 text-white  rounded-md'>Login</button></Link>
+      { user ? <><p>Profile</p> <button className='bg-orange-400 px-6 py-2 text-white  rounded-md'>Logout</button></> : <><Link to='/login'><button className='bg-orange-400 px-6 py-2 text-white  rounded-md'>Login</button></Link></> }
+        
       </div>
     </div>
   );
