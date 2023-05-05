@@ -5,7 +5,7 @@ import { AiFillLike } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
 const SelectedChef = ({ chef }) => {
-    const { id, chef_name, chef_picture, years_of_experience, ratting, likes } = chef
+    const { id, chef_name, chef_picture, years_of_experience, ratting, likes, special_recipes } = chef
     console.log(chef)
     return (
         <div>
@@ -19,6 +19,7 @@ const SelectedChef = ({ chef }) => {
                 <div className="card-body ms-4 mt-0">
                     <h2 className="card-title text-2xl font-semibold">{chef_name}</h2>
                     <p>Total experience {years_of_experience} years</p>
+                    <p><span className='text-orange-400 font-bold'>{special_recipes.length}</span> Recipes</p>
                     <div className='flex'>
                        <div className='grow'>
                        <Rating
@@ -33,10 +34,10 @@ const SelectedChef = ({ chef }) => {
                         </Rating> {ratting}
                        </div>
                         <div>
-                            <p className='flex items-center'><AiFillLike className='text-gray-400 text-xl'></AiFillLike> Likes:{likes}</p>
+                            <p className='flex items-center'><AiFillLike className='text-gray-400 text-xl'></AiFillLike> Likes:<span className='font-bold text-orange-400'>{likes}</span></p>
                         </div>
                     </div>
-                    <div className='flex  text-white rounded-md hover:bg-orange-500 bg-orange-400 p-2 w-2/4 items-center justify-center'><Link><button className=' text-xl font-bold '>Recipes</button></Link>
+                    <div className='flex  text-white rounded-md hover:bg-orange-500 bg-orange-400 p-2 w-full items-center justify-center'><Link to={`/chef/${id}`}><button className=' text-xl font-bold '>View Recipes</button></Link>
                     <FaArrowRight className='mt-1 ms-2'></FaArrowRight> </div>  
                 </div>
             </div>
