@@ -29,7 +29,7 @@ const route = createBrowserRouter(
                 {
                     path: 'chef/:id',
                     element: <PrivateRouter><ChefDetails></ChefDetails></PrivateRouter>,
-                    loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
+                    loader: ({params}) => fetch(`https://chef-recipe-server-side-kabirmd0987-gmailcom.vercel.app/chef/${params.id}`)
                 },
                 {
                     path : 'blog',

@@ -1,8 +1,33 @@
 import React from 'react';
 import Lottie from "lottie-react";
 import questions from '../../assets/questions.json'
+import { Page,  View, Document, StyleSheet } from '@react-pdf/renderer';
 
+const styles = StyleSheet.create({
+  page: {
+    flexDirection: 'row',
+    backgroundColor: '#E4E4E4'
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1
+  }
+});
 const Blog = () => {
+    const blogPDF = () => (
+        
+        <Document>
+          <Page size="A4" style={styles.page}>
+            <View style={styles.section}>
+              
+            </View>
+            <View style={styles.section}>
+              
+            </View>
+          </Page>
+        </Document>
+      );
     return (
         <div className='lg:max-w-screen-2xl mx-auto'>
             <h1 className='text-center text-7xl'>All Blog post</h1>
@@ -58,6 +83,7 @@ const Blog = () => {
                                 A custom hook always starts with the name ‘use’.
                             </p>
                         </div>
+                        
                     </div>
                     <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
                         <div className="collapse-title text-xl font-medium">
@@ -79,7 +105,7 @@ const Blog = () => {
                         </div>
                     </div>
 
-
+                    <button onClick={blogPDF} className='bg-orange-400 py-2 px-4 rounded-md text-xl text-white mt-12'>DownLoad PDF</button>
                 </div>
                 <div>
                     <Lottie animationData={questions}></Lottie>
