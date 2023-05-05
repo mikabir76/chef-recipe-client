@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Lottie from "lottie-react";
 import { BiError } from "react-icons/bi";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from './../../assets/login.json'
 import { FaGithub } from 'react-icons/fa';
 import { AiFillGoogleCircle } from "react-icons/ai";
@@ -13,6 +13,10 @@ const Login = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     const {signIn, googleSignIn, githubSignIn} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+    console.log(location)
     const handleLogin = event =>{
         event.preventDefault();
         const form = event.target;
@@ -27,9 +31,11 @@ const Login = () => {
             console.log(loggedUser)
             form.reset('');
             toast('Login has been successfully')
+            navigate(from, { replace: true });
+
         })
         .catch(err =>{
-            console.log(err.message)
+            setError(err.message)
         })
        
     }
@@ -40,7 +46,7 @@ const Login = () => {
             console.log(loggedUser)
         })
         .catch(error => {
-            console.log(error.message)
+            setError(error.message)
         })
     }
 
@@ -51,7 +57,7 @@ const Login = () => {
             console.log(loggedUser)
         })
         .catch(error => {
-            console.log(error.message)
+           setError(error.message)
         })
     }
     return (

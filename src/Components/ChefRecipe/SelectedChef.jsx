@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const SelectedChef = ({ chef }) => {
     const { id, chef_name, chef_picture, years_of_experience, ratting, likes, special_recipes } = chef
-    console.log(chef)
+    // console.log(chef)
     return (
         <div>
 
